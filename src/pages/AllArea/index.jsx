@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AreaFilter from '@/components/AreaFilter'
 import CardContainer from '@/components/CardContainer'
 import instance from '@/apis/axios'
+import styles from './allArea.module.css';
 
 function AllArea() {
   const fetchStationData = async args => {
@@ -28,7 +29,7 @@ function AllArea() {
 
 
   return (
-    <>
+    <main className={styles["all-area"]}>
 
       <AreaFilter
         isSidoOnly={ true }
@@ -41,7 +42,7 @@ function AllArea() {
         }}
       />
       <CardContainer stationData={ stationData } />
-    </>
+    </main>
   )
 }
 

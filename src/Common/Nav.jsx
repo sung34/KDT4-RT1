@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 function Nav() {
   return (
-    <nav style={ { width: '50vw', display: 'block', fontSize: '0.5em' } }>
+    <nav style={ { width: '50vw', display: 'block', fontSize: '0.5em', padding: '10px 5px' } }>
       <ul>
         <NavLink style={({ isActive }) => ({ color: isActive ? 'red' : 'black', width: '75px', display: 'inline-block', textAlign: 'center'})} to="/">
           <img style={{ width: '35px' }} src='../static/svg/marker.svg' />

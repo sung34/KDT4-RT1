@@ -3,7 +3,7 @@ import styles from './card.module.css';
 
 function Card({ data }) {
   console.log(data)
-  const { sidoName, stationName, pm10Grade, pm10value, dataTime } = data
+  const { sidoName, stationName, pm10Grade, pm10Value, dataTime } = data
   function pm10GradeEval(pm10Grade) {
     switch (pm10Grade) {
       case "1":
@@ -24,12 +24,13 @@ function Card({ data }) {
   return (
     <>
       {data ? (
-        <li className={`${styles.card} ${(pm10Grade) ? "card-grade" + (pm10Grade) : ""}`}>
+        <li className={`${styles.card} ${pm10Grade ? styles[`card-grade${pm10Grade}`] : ''}`}>
+
           <h1>{sidoName}</h1>
           <h1>{stationName}</h1>
           <span>{pm10GradeEval(pm10Grade)}</span>
-          <h3>{pm10value}</h3>
-          <h5>{dataTime}</h5>
+          <h3>수치: {pm10Value}</h3>
+          <h5>측정 시간: {dataTime}</h5>
         </li>
       ) : (
         <></>

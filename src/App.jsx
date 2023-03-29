@@ -1,13 +1,14 @@
-
+import Router from "@/routes/Router"
+import Nav from "./common/Nav"
 
 import './App.css'
 
 function App() {
   return (
-      <div>
-          <Nav />
-          <Router />
-      </div>
+      <>
+        <Router />
+        <Nav />
+      </>
   )
 }
 export default App

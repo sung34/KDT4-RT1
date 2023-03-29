@@ -1,0 +1,22 @@
+.card {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-grade1 {
+  background-color: #ff9999;
+}
+.card-grade2 {
+  background-color: #fcf5a4;
+}
+.card-grade3 {
+  background-color: #d1ff80;
+}
+.card-grade4 {
+  background-color: #52cefc;
+}
+.card-grade5 {
+  background-color: #4b90ff;
+}
